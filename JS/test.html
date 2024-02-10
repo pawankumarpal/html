@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> window.blur() method of JavaScript</title>
+</head>
+
+<body>
+	<h1 style="color: green">Pawan Kumar</h1>
+	<h2>JavaScript window.focus() Method</h2>
+	<script>
+		let Window;
+
+		// Function that open the new Window
+		function windowOpen() {
+			Window = window.open(
+				"https://www.google.com/",
+				"_blank", "width=400, height=450 top=75");
+		}
+
+		// function that Closes the open Window
+		function windowClose() {
+			Window.close();
+		}
+
+		//function that focus on open Window
+		function windowFocus() {
+			Window.focus();
+		}
+	</script>
+	<button onclick="windowOpen()">
+		Open Google
+	</button>
+	<button onclick="windowFocus()">
+		Focus Google
+	</button>
+	<button onclick="windowClose()">
+		Close Google
+	</button>
+</body>
+</html>

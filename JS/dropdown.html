@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        function onChangeDropdown(){
+            var userName = document.getElementById("userDropdown").val;
+            $('#userName').val(userName);
+        }
+
+        $(function() {
+            $('#userDropdown').change(function() {
+            var userNameData = document.getElementById("userDropdown");
+            var userName = userNameData.value;
+            $('#userName').val(userNameData.options[userNameData.selectedIndex].text);
+            });
+        });
+    </script>
+</head>
+<body>
+    <select name="User Presnt"
+            style=""
+            id = "userDropdown"       
+    >
+        <option value="1">--Select--</option>
+        <option value="2">Pawan</option>
+        <option value="3">Kunal Verma</option>
+    </select>
+
+    <form>Kunal</form>
+    <label>Blank</label><br>
+    <input type="text" id="userName"></input>
+</body>
+</html>
